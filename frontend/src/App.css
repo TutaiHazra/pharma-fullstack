@@ -1,17 +1,153 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* ====== GLOBAL RESET ====== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #e3f0ff, #fafaff);
+  color: #1e2a47;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+/* Root container */
+#root {
+  width: 100%;
+  max-width: 800px;
+  padding: 30px;
+}
+
+/* ====== NAVBAR ====== */
 .navbar {
-  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  padding: 15px 20px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 .navbar button {
-  margin: 0 1rem;
-  padding: 0.5rem 1rem;
+  background-color: #f3f6ff;
+  border: 1px solid #c9d4ff;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-weight: 500;
+  font-size: 15px;
+  color: #1e2a47;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.navbar button:hover {
+  background-color: #4c6ef5;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(76, 110, 245, 0.3);
+}
+
+/* ====== PAGE SECTIONS ====== */
+div {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px 25px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  color: #1e2a47;
+  letter-spacing: 0.5px;
+}
+
+/* ====== INPUT FIELDS ====== */
+input {
+  padding: 10px 15px;
+  margin: 5px;
+  width: 180px;
+  border-radius: 8px;
+  border: 1px solid #ccd4ff;
+  outline: none;
+  font-size: 14px;
+  background-color: #f9fbff;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus {
+  border-color: #4c6ef5;
+  box-shadow: 0 0 0 4px rgba(76, 110, 245, 0.15);
+}
+
+/* ====== BUTTONS ====== */
+button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: #4c6ef5;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  margin: 10px 0;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #3b5bdb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(76, 110, 245, 0.3);
+}
+
+/* ====== LISTS ====== */
+ul {
+  list-style: none;
+  margin-top: 20px;
+  text-align: left;
+  padding: 0 10px;
+}
+
+li {
+  background: #f1f5ff;
+  margin: 8px 0;
+  padding: 12px 15px;
+  border-radius: 10px;
+  font-size: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: 0.2s ease;
+}
+
+li:hover {
+  background: #e0e8ff;
+  transform: scale(1.02);
+}
+
+/* ====== RESPONSIVE DESIGN ====== */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  div {
+    padding: 20px;
+  }
 }
 
